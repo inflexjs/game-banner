@@ -4,18 +4,30 @@
 	box-sizing: border-box;
 }
 
-.main {
-	height: 100vh;
-	background-color: #141414;
-
+body {
+	background-color: #fff;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: repeat(3, 485px);
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	justify-items: center;
 	justify-content: center;
 }
 
 .block {
 	display: flex;
 	position: relative;
+	width: 480px;
+	height: 270px;
+	justify-content: center;
+	align-items: center;
 }
 
 .block:hover .gif_game {
@@ -35,12 +47,12 @@
 
 .gif_game {
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	z-index: 1;
-	transform: translate(-50%,-50%);
-	display: none;
-	filter: brightness(80%)
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    display: none;
+    filter: brightness(80%);
 }
 
 .wot_game {
@@ -85,21 +97,21 @@
 
 @keyframes slidein {
    0% {
-    top: 120%;
+	top: 120%;
   }
 
   85% {
-    top: 110%;
+	top: 110%;
   }
 
   90% {
-  	top: 45%;
+	top: 45%;
   }
   95% {
-  	top: 55%;
+	top: 55%;
   }
   100% {
-  	top: 50%;
+	top: 50%;
   }
 }
 
@@ -107,8 +119,8 @@
 	top: 50%;
 	opacity: 1;
 	animation-duration: 3.2s;
-  	animation-name: slidein;
-  	animation-timing-function: ease-in-out;
+	animation-name: slidein;
+	animation-timing-function: ease-in-out;
 }
 
 .block_btn:hover {
@@ -135,26 +147,26 @@
 	top: 75%;
 	opacity: 1;
 	animation-duration: 4s;
-  	animation-name: slidein_p;
-  	animation-timing-function: ease-in-out;
+	animation-name: slidein_p;
+	animation-timing-function: ease-in-out;
 }
 
 @keyframes slidein_p {
   0% {
-    top: 120%;
+	top: 120%;
   }
 
   85% {
-    top: 110%;
+	top: 110%;
   }
 
   90% {
-  	top: 70%;
+	top: 70%;
   }
   95% {
-  	top: 80%;
+	top: 80%;
   }
   100% {
-  	top: 75%;
+	top: 75%;
   }
 }
