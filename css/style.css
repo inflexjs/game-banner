@@ -36,37 +36,38 @@ body {
 
 .block_logo {
 	position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    height: 107%;
-    width: 104%;
-    overflow: hidden;
-    transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	height: 107%;
+	width: 104%;
+	overflow: hidden;
+	transform: translate(-50%, -50%);
 }
 
 .gif_game {
 	position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    transform: translate(-50%,-50%);
-    display: none;
-    filter: brightness(80%);
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	transform: translate(-50%, -50%);
+	display: none;
+	filter: brightness(70%);
 }
 
 .wot_game {
-	filter: brightness(90%)
+	filter: brightness(80%);
 }
 
 .wot_logo {
-	width: 150px;
+	width: 250px;
 
 	position: absolute;
-	left: 30px;
-	bottom: 30px;
+	left: 50%;
+	bottom: 50%;
 	z-index: 2;
 	transition: all 0.3s;
+	transform: translate(-50%, 50%);
 }
 
 .wot_logo-active {
@@ -79,7 +80,7 @@ body {
 	top: 120%;
 	left: 50%;
 	z-index: 2;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 
 	background-color: #df1b1a;
 
@@ -96,23 +97,23 @@ body {
 }
 
 @keyframes slidein {
-   0% {
-	top: 120%;
-  }
+	0% {
+		top: 120%;
+	}
 
-  85% {
-	top: 110%;
-  }
+	85% {
+		top: 110%;
+	}
 
-  90% {
-	top: 45%;
-  }
-  95% {
-	top: 55%;
-  }
-  100% {
-	top: 50%;
-  }
+	90% {
+		top: 45%;
+	}
+	95% {
+		top: 55%;
+	}
+	100% {
+		top: 50%;
+	}
 }
 
 .block_btn-active {
@@ -135,7 +136,7 @@ body {
 	top: 120%;
 	left: 50%;
 	z-index: 2;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 
 	height: 40px;
 	width: 40px;
@@ -152,21 +153,36 @@ body {
 }
 
 @keyframes slidein_p {
-  0% {
-	top: 120%;
-  }
+	0% {
+		top: 120%;
+	}
 
-  85% {
-	top: 110%;
-  }
+	85% {
+		top: 110%;
+	}
 
-  90% {
-	top: 70%;
-  }
-  95% {
-	top: 80%;
-  }
-  100% {
-	top: 75%;
-  }
+	90% {
+		top: 70%;
+	}
+	95% {
+		top: 80%;
+	}
+	100% {
+		top: 75%;
+	}
+}
+
+@media (max-width: 1530px) {
+	.main {
+		grid-template-columns: repeat(2, 485px);
+	}
+}
+
+@media (max-width: 1010px) {
+	body {
+		align-items: baseline;
+	}
+	.main {
+		grid-template-columns: repeat(1, 485px);
+	}
 }
